@@ -7,7 +7,7 @@ from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 
-class NawalokaWebCrawler:
+class WebCrawler:
     def __init__(self, base_url: str, max_depth: int, exclude_patterns: List[str]):
         self.base_url = base_url.rstrip('/')
         self.max_depth = max_depth
