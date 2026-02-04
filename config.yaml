@@ -1,0 +1,29 @@
+# Crawler Configuration
+base_url: "https://www.nawaloka.com"
+max_depth: 3
+request_delay: 2.0
+
+# Initial paths to start the crawl
+start_paths:
+  - "/"
+  - "/our-centres"
+  - "/healthchecks"
+  - "/channeling"
+  - "/aboutus"
+  - "/contactus"
+  - "/blogs-and-news"
+  - "/emergency"
+  - "/international"
+
+# Patterns to skip
+exclude_patterns:
+  - "/login"
+  - "/terms"
+  - "/privacy"
+  - "/admin"
+  - "/images/"
+  - "/downloads/"
+  - "/media/"
+
+# Output settings
+output_file: "output/crawled_docs.jsonl"
