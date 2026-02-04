@@ -1,9 +1,9 @@
 # Crawler Configuration
-base_url: "https://www.nawaloka.com"
+base_url: "https://www.nawaloka.com" # Base URL of the website to crawl
 max_depth: 3
 request_delay: 2.0
 
-# Initial paths to start the crawl
+# Initial paths to start the crawl(Add your own paths if needed)
 start_paths:
   - "/"
   - "/our-centres"
@@ -15,7 +15,7 @@ start_paths:
   - "/emergency"
   - "/international"
 
-# Patterns to skip
+# Patterns to skip(Add your own paths if needed)
 exclude_patterns:
   - "/login"
   - "/terms"
