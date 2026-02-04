@@ -3,7 +3,7 @@ import asyncio
 import json
 import os
 import time
-from crawler import NawalokaWebCrawler
+from crawler import WebCrawler
 
 def load_config():
     with open("config.yaml", "r") as f:
