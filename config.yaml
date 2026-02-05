@@ -1,29 +1,24 @@
-# Crawler Configuration
-base_url: "https://www.nawaloka.com" # Base URL of the website to crawl
-max_depth: 3
-request_delay: 2.0
+# Nawaloka Crawler Configuration
+crawler:
+  base_url: "your URL"
+  max_depth: 3 #configure your required depth
+  request_delay: 2.0 #configure your required delay between requests in seconds
 
-# Initial paths to start the crawl(Add your own paths if needed)
-start_paths:
-  - "/"
-  - "/our-centres"
-  - "/healthchecks"
-  - "/channeling"
-  - "/aboutus"
-  - "/contactus"
-  - "/blogs-and-news"
-  - "/emergency"
-  - "/international"
-
-# Patterns to skip(Add your own paths if needed)
-exclude_patterns:
-  - "/login"
-  - "/terms"
-  - "/privacy"
-  - "/admin"
-  - "/images/"
-  - "/downloads/"
-  - "/media/"
-
-# Output settings
-output_file: "output/crawled_docs.jsonl"
+  #your routes to start crawling from
+  start_paths:
+    - "/"
+    - "/our-centres"
+    - "/healthchecks"
+    - "/channeling"
+    - "/aboutus"
+    - "/contactus"
+    - "/blogs-and-news"
+  #your routes to exclude from crawling
+  exclude_patterns:
+    - "/login"
+    - "/terms"
+    - "/privacy"
+    - "/admin"
+    - "/images/"
+    - "/downloads/"
+    - "/media/"
