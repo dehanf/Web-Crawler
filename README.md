@@ -1,4 +1,4 @@
-Web Crawler 🏥
+### Web Crawler 🏥
 
 A robust, RAG-ready web crawler designed to extract content from websites. It handles dynamic JavaScript (SPA) content and converts pages into clean Markdown and JSONL formats suitable for LLM embedding.
 
