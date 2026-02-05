@@ -20,17 +20,20 @@ A powerful asynchronous web crawler built with Python that extracts content from
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd webcrawler
 ```
 
 2. Install Python dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. Install Playwright browsers:
+
 ```bash
 playwright install chromium
 ```
@@ -41,15 +44,15 @@ Edit `config.yaml` to customize your crawl:
 
 ```yaml
 base_url: "https://example.com"
-max_depth: 3                    # Maximum crawl depth
-request_delay: 2.0              # Delay between requests (seconds)
+max_depth: 3 # Maximum crawl depth
+request_delay: 2.0 # Delay between requests (seconds)
 
-start_paths:                    # Initial paths to crawl
+start_paths: # Initial paths to crawl
   - "/"
   - "/about"
   - "/contact"
 
-exclude_patterns:               # URL patterns to skip
+exclude_patterns: # URL patterns to skip
   - "/login"
   - "/admin"
   - "/images/"
@@ -75,6 +78,7 @@ python main.py
 ```
 
 The crawler will:
+
 1. Load configuration from `config.yaml`
 2. Start crawling from the specified URLs
 3. Extract and convert content to markdown
@@ -109,7 +113,7 @@ The crawler saves data in JSONL (JSON Lines) format. Each line is a JSON object:
 
 1. **Crawler initialization**: Sets up base URL, depth limits, and exclusion patterns
 2. **Page fetching**: Uses Playwright to render JavaScript-heavy pages
-3. **Content extraction**: 
+3. **Content extraction**:
    - Removes scripts, styles, navigation, footers, and ads
    - Extracts main content area (targets `main`, `article`, or content divs)
    - Converts HTML to clean markdown
@@ -130,6 +134,7 @@ The crawler saves data in JSONL (JSON Lines) format. Each line is a JSON object:
 ### Excluding Content
 
 The crawler automatically excludes:
+
 - Scripts, styles, navigation, footers, sidebars
 - Binary files (images, PDFs, executables)
 - JavaScript warning messages
@@ -138,6 +143,7 @@ The crawler automatically excludes:
 ### Content Extraction
 
 The crawler prioritizes content from:
+
 1. `<div id="root">`
 2. `<main>` tag
 3. `<article>` tag
@@ -159,4 +165,3 @@ This project is provided as-is for educational and research purposes.
 ## Disclaimer
 
 Always respect websites' `robots.txt` and terms of service. Use responsibly and ethically. Add appropriate delays between requests to avoid overwhelming servers.
-
